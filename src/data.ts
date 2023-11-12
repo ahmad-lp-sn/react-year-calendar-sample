@@ -1,4 +1,4 @@
-import { CalendarRows } from "./types";
+import { CalendarRows } from "./YearCalendar/types";
 
 const calendarRows: CalendarRows[] = [
   {
