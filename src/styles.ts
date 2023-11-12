@@ -57,24 +57,35 @@ export const useStyles = () => {
       zIndex: 6,
     },
     calendar: {
+      light: {
+        monthsContainer: {
+          borderColor: "#a4f4f0",
+        },
+        monthLabelContainer: {
+          borderColor: "#a4f4f0",
+        },
+        weekLabelContainer: {
+          borderColor: "#a4f4f0",
+        },
+      },
       dark: {
         mainContainer: {
-          background: "#1e1e1e", // Dark background color
-          color: "white", // White text color
+          background: "#1e1e1e",
+          color: "white",
         },
         topLeftCorner: {
-          background: "#2c2c2c", // Dark gray
-          color: "white", // White text color
+          background: "#2c2c2c",
+          color: "white",
         },
         rowLabelsContainer: {
-          background: "#2c2c2c", // Dark gray
+          background: "#2c2c2c",
         },
         rowLabel: {
-          color: "white", // White text color
+          color: "white",
         },
         tableContainer: {
-          border: "0.5px solid #2c2c2c", // Dark gray border
-          background: "#1e1e1e", // Dark background color
+          border: "0.5px solid #2c2c2c",
+          background: "#1e1e1e",
         },
         monthsContainer: {
           background: "#2c2c2c",
@@ -83,13 +94,54 @@ export const useStyles = () => {
           background: "#2c2c2c",
         },
         monthsDivider: {
-          border: "0.5px solid #2c2c2c", // Dark gray border
+          border: "0.5px solid #2c2c2c",
         },
         weeksDivider: {
-          border: "0.5px solid #2c2c2c", // Dark gray border
+          border: "0.5px solid #2c2c2c",
         },
         slot: {
-          backgroundColor: "#2c2c2c", // Dark gray
+          backgroundColor: "#2c2c2c",
+        },
+      },
+      custom1: {
+        mainContainer: {
+          background: "#1e1e1e",
+          color: "white",
+        },
+        topLeftCorner: {
+          background: "#723D46",
+        },
+        rowLabelsContainer: {
+          background: "#723D46",
+        },
+        tableContainer: {
+          border: "0.5px solid #2c2c2c",
+          background: "#472D30",
+        },
+        monthsContainer: {
+          background: "#472D30",
+          borderColor: "#FFE1A8",
+        },
+        weeksContainer: {
+          background: "#C9CBA3",
+          color: "#472D30",
+        },
+        monthLabelContainer: {
+          borderColor: "#FFE1A8",
+        },
+        weekLabelContainer: {
+          borderColor: "#FFE1A8",
+        },
+        monthsDivider: {
+          border: "0.5px solid #FFE1A8",
+          opacity: 0.5,
+        },
+        weeksDivider: {
+          border: "0.5px solid #FFE1A8",
+          opacity: 0.5,
+        },
+        slot: {
+          backgroundColor: "#2c2c2c",
         },
       },
     },
