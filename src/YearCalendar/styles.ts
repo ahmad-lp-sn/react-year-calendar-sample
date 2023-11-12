@@ -31,6 +31,7 @@ export const useStyles = (
     rowLabelsContainer: {
       display: "flex",
       flexDirection: "column",
+      alignItems: "end",
       position: "sticky",
       background: "#f4f4f4",
       left: 0,
