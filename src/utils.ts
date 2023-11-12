@@ -1,5 +1,5 @@
 import dayjs, { Dayjs } from "dayjs";
-import { MonthRecord, SlotProps } from "./types";
+import { MonthRecord, SlotProps } from "./YearCalendar/types";
 
 export const range = (start: number, end: number, step: number = 1) => {
   const lenght = Math.floor((Math.abs(end - start) || 1) / step);
@@ -21,7 +21,7 @@ export const getMonths = (date: Dayjs, start = 0, end = 12) => {
     const record: MonthRecord = {
       name: month.format("MMMM"),
       days: month.daysInMonth(),
-      startDay: offset
+      startDay: offset,
     };
     offset += record.days;
 
@@ -33,7 +33,7 @@ export const getMonths = (date: Dayjs, start = 0, end = 12) => {
 
 export const getRowSlots = <T extends SlotProps = SlotProps>(
   date: Dayjs,
-  slots: T[]
+  slots: T[],
 ) => {
   const startOfTheYear = dayjs(date.format("YYYY-01-01"));
 
@@ -45,7 +45,7 @@ export const getRowSlots = <T extends SlotProps = SlotProps>(
     return {
       startDay: startDay > 0 ? startDay : 0,
       days: startDay > 0 ? days : days + startDay,
-      ...slot
+      ...slot,
     };
   });
 

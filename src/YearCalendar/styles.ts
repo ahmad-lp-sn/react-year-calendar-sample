@@ -1,9 +1,10 @@
+import { CSSProperties } from "react";
 import { DEFAULT_MIN_DAY_WIDTH, DEFAULT_MIN_ROW_HEIGHT } from "./constants";
-import { YearCalendarProps } from "./types";
+import { YearCalendarProps, RestylebleComponents } from "./types";
 
 export const useStyles = (
-  styles: YearCalendarProps["styles"]
-): YearCalendarProps["styles"] => {
+  styles: YearCalendarProps["styles"],
+): Record<RestylebleComponents, CSSProperties> => {
   const dayWidth = Math.max(styles?.dayWidth || 0, DEFAULT_MIN_DAY_WIDTH);
   const rowHeight = Math.max(styles?.rowHeight || 0, DEFAULT_MIN_ROW_HEIGHT);
 
@@ -14,7 +15,7 @@ export const useStyles = (
       width: "fit-content",
       minHeight: "100%",
       position: "relative",
-      ...styles?.mainContainer
+      ...styles?.mainContainer,
     },
     topLeftCorner: {
       backgroundColor: "transparent",
@@ -25,7 +26,7 @@ export const useStyles = (
       minHeight: `${rowHeight * 2}rem`,
       minWidth: "100%",
       top: 0,
-      zIndex: 0
+      zIndex: 0,
     },
     rowLabelsContainer: {
       display: "flex",
@@ -33,7 +34,7 @@ export const useStyles = (
       position: "sticky",
       left: 0,
       zIndex: 5,
-      ...styles?.rowLabelsContainer
+      ...styles?.rowLabelsContainer,
     },
     rowLabel: {
       whiteSpace: "nowrap",
@@ -43,7 +44,7 @@ export const useStyles = (
       paddingLeft: "1rem",
       display: "flex",
       alignItems: "center",
-      ...styles?.rowLabel
+      ...styles?.rowLabel,
     },
     tableContainer: {
       display: "flex",
@@ -52,7 +53,7 @@ export const useStyles = (
       maxWidth: "none",
       ...styles?.tableContainer,
       boxSizing: "border-box",
-      position: "relative"
+      position: "relative",
     },
     monthsContainer: {
       display: "flex",
@@ -64,7 +65,7 @@ export const useStyles = (
       flexWrap: "nowrap",
       zIndex: 4,
       ...styles?.monthsContainer,
-      boxSizing: "border-box"
+      boxSizing: "border-box",
     },
     weeksContainer: {
       display: "flex",
@@ -75,7 +76,7 @@ export const useStyles = (
       minHeight: `${rowHeight}rem`,
       zIndex: 4,
       ...styles?.weeksContainer,
-      boxSizing: "border-box"
+      boxSizing: "border-box",
     },
     rowsContainer: {
       width: "100%",
@@ -83,19 +84,19 @@ export const useStyles = (
       display: "flex",
       flexDirection: "column",
       ...styles?.rowsContainer,
-      position: "relative"
+      position: "relative",
     },
     monthsDivider: {
       height: "100%",
       ...styles?.monthsDivider,
       top: 0,
-      position: "absolute"
+      position: "absolute",
     },
     weeksDivider: {
       height: "100%",
       ...styles?.weeksDivider,
       top: 0,
-      position: "absolute"
+      position: "absolute",
     },
     monthLabelContainer: {
       display: "flex",
@@ -104,7 +105,7 @@ export const useStyles = (
       border: "0px",
       zIndex: 1,
       ...styles?.monthLabelContainer,
-      boxSizing: "border-box"
+      boxSizing: "border-box",
     },
     weekLabelContainer: {
       display: "flex",
@@ -113,7 +114,7 @@ export const useStyles = (
       width: `${7 * dayWidth}rem`,
       zIndex: 2,
       ...styles?.weekLabelContainer,
-      boxSizing: "border-box"
+      boxSizing: "border-box",
     },
     row: {
       height: `${rowHeight}rem`,
@@ -122,7 +123,7 @@ export const useStyles = (
       display: "flex",
       justifyItems: "center",
       ...styles?.row,
-      position: "relative"
+      position: "relative",
     },
     slotContainer: {
       height: "100%",
@@ -130,7 +131,7 @@ export const useStyles = (
       justifyContent: "start",
       alignItems: "center",
       ...styles?.slotContainer,
-      position: "absolute"
+      position: "absolute",
     },
     slot: {
       whiteSpace: "nowrap",
@@ -141,7 +142,7 @@ export const useStyles = (
       textAlign: "center",
       overflow: "hidden",
       textOverflow: "ellipsis",
-      ...styles?.slot
-    }
+      ...styles?.slot,
+    },
   };
 };
