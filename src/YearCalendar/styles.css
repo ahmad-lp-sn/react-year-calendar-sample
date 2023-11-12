@@ -1,0 +1,6 @@
+.slot:hover {
+  width: fit-content;
+  cursor: pointer;
+  overflow: unset !important;
+  z-index: 3;
+}

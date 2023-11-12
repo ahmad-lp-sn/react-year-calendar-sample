@@ -1,0 +1,7 @@
+.button:hover {
+  background: linear-gradient(to right, #333333, #666666) !important;
+}
+
+.button-light:hover {
+  background: linear-gradient(to right, #1a1a1a, #000033) !important;
+}
