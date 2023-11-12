@@ -13,7 +13,7 @@ export default function App() {
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         style={{
           ...styles.button,
-          ...(theme === "light" && styles.buttonLight)
+          ...(theme === "light" && styles.buttonLight),
         }}
       >
         {theme === "dark" ? "light" : "dark"}
@@ -22,7 +22,10 @@ export default function App() {
         <div style={styles.hBlur} />
         <div style={styles.vBlur} />
         <div style={styles.calendarWrapper}>
-          <YearCalendar styles={styles.calendar[theme]} rows={calendarRows} />
+          <YearCalendar
+            styles={theme === "dark" ? styles.calendar.dark : {}}
+            rows={calendarRows}
+          />
         </div>
       </div>
     </div>
