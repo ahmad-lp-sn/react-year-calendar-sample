@@ -1,5 +1,4 @@
-# react-year-calendar-sample
-Created with CodeSandbox
+# React Year Calendar Sample
 
 Default theme
 
